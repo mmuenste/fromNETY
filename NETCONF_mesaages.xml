@@ -1,0 +1,58 @@
+<messages>
+	<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+		<capabilities>
+			<capability>urn:ietf:params:netconf:base:1.0</capability>
+			<capability>urn:ietf:params:netconf:base:1.1</capability>
+		</capabilities>
+	</hello>
+	
+
+	<rpc message-id="91677" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+		<get >
+			<filter type="subtree">
+				<configuration xmlns="http://xml.juniper.net/xnm/1.1/xnm">
+					<system>
+						<host-name/>
+					</system>
+				</configuration>
+			</filter>
+		</get>
+	</rpc>
+	
+
+	<rpc message-id="91677" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+		<edit-config>
+			<target>
+				<candidate/>
+			</target>
+			<config>
+				<configuration xmlns="http://xml.juniper.net/xnm/1.1/xnm">
+					<system>
+						<host-name>MatthiasRouter</host-name>
+					</system>
+				</configuration>
+			</config>
+		</edit-config>
+	</rpc>
+	
+
+	<rpc message-id="91677" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+		<commit/>
+	</rpc>
+	
+	<rpc message-id="91677" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+		<edit-config>
+			<target>
+				<running/>
+			</target>
+			<config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
+				<configuration xmlns="http://xml.juniper.net/xnm/1.1/xnm">
+					<system>
+						<host-name xc:operation="delete"></host-name>
+					</system>
+				</configuration>
+			</config>
+		</edit-config>
+	</rpc>
+	]]>]]>
+</messages>
